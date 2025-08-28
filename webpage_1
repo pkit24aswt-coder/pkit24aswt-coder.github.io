@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WePet</title>
+</head>
+<body>
+	<!-- Logo -->
+	<header>
+		<img src="logo.png" height="30px">
+	</header>
+
+	<!-- Navigation Bar -->
+	<nav>
+
+		<ul>
+			<li>Home</li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#service">Services</a></li>
+			<li>Contact</li>
+		</ul>
+	</nav>
+
+	<!-- Wallpaper -->
+	<img src="bg_2.png" width="100%">
+
+	<!-- About -->
+	<div id="about" align="center">
+		<h1>How It Works</h1>
+		<hr width="75%">
+
+		<ol>
+			<li>
+				<h3>Find Your Pet</h3>
+			</li>
+				<p>
+					Select a pet from out adoption list.
+				</p>
+			<li>
+				<h3>Know Your Pet</h3>
+			</li>
+				<p>
+					Schedule a visit with the chosen one.
+				</p>
+			<li>
+				<h3>Take Your Pet Home</h3>
+			</li>
+				<p>
+					Follow the adoption process.
+				</p>
+		</ol>
+	</div>
+	<hr>
+
+	<!-- Pets for Adoption -->
+	<div id="pets" align="center">
+		<h1>Waiting Adoption</h1>
+		<hr width="75%">
+		<ul>
+			<li>
+				<h4>
+					Cats
+				</h4>
+				<img src="Cats.png" width="75%">
+			</li>
+			<hr>
+			<li>
+				<h4>
+					Dogs
+				</h4>
+				<img src="Dogs.png" width="75%">
+			</li>
+			<hr>
+			<li>
+				<h4>
+					Rabbits
+				</h4>
+				<img src="Rabbits.png" width="75%">
+			</li>
+			<hr>
+		</ul>
+	</div>
+
+	<!-- Services -->
+	<div id="service" align="center">
+		<h1>What We Offer</h1>
+		<h3>WHERE LOVE AND CARE UNITE!</h3>
+		<p>
+			We’re here to help pets find loving homes and support families every step of the way.
+		</p>
+
+		<img src="services.png" width="75%">
+
+		<table align="center" border="1px" width="80%">
+			<tr>
+				<th>Care & Support</th>
+				<th>Products & Services</th>
+			</tr>
+			<tr align="center">
+				<td>
+					<ol>
+						<li>Animal Training</li>
+						<li>Animal Adoption</li>
+						<li>Animal Rescue</li>
+					</ol>					
+				</td>
+				<td>
+					<ol>
+						<li>Pet Supplies</li>
+						<li>Pet Grooming</li>
+						<li>Pet Sitter</li>
+					</ol>
+				</td>
+			</tr>
+			
+		</table>
+	</div>
+
+	<div id="progress">
+		<hr>
+			<table width="100%">
+				<tr align="center">
+					<td>10k</td>
+					<td>7k</td>
+					<td>96k</td>
+					<td>10+</td>
+				</tr>
+				<tr align="center">
+					<td>ADOPTION</td>
+					<td>RESCUED</td>
+					<td>CLIENTS</td>
+					<td>SERVICES</td>
+				</tr>
+			</table>
+		<hr>
+	</div>
+
+	<!-- Support -->
+	<div id="support">
+		<h1 align="center">Support</h1>
+		<table border="1" width="100%">
+			<tr>
+				<!-- Adopt -->
+				<td align="center" width="33%">
+					<h2>ADOPT</h2>
+					<img src="support_adopt.png" width="75%">
+					<p>Provide comfort & care to rescued animals.</p>
+				</td>
+				<!-- Donate -->
+				<td align="center" width="33%">
+					<h2>DONATE</h2>
+					<img src="support_donate.png" width="75%">
+					<p>Donate for food and medical care of homeless animals.</p>
+				</td>
+				<!-- Foster -->
+				<td align="center" width="33%">
+					<h2>FOSTER</h2>
+					<img src="support_foster.png" width="75%">
+					<p>Be foster parents to animals in need.</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- Contact Us -->
+	<div id="contact_us" align="center">
+		<h1>Contact Us</h1>
+		<p>
+			<b>Location: </b>Pokhara, Nepal
+		</p>
+		<p>
+			<b>Telephone: </b>061-234567
+		</p>
+
+		<form>
+			<table>
+				<tr>
+					<td><label for="full_name">Name</td>
+					<td><input type="text" id="full_name" placeholder="name" required></td>
+				</tr>
+				<tr>
+					<td><label for="email">Email</td>
+					<td><input type="email" id="email" name="email" placeholder="email" required></td>
+				</tr>
+				<tr>
+					<td><label for="message">Message</td>
+					<td><textarea type="text"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Submit"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+</body>
+</html>
