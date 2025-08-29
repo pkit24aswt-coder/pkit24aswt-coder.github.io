@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ADORA</title>
+	<link rel="stylesheet" type="text/css" href="adora_homepage.css">
+
+	<!-- Import Poppins from Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	
+	<!-- Import Bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+	<!-- Header (Logo & Navigation Bar) -->
+	<header>
+		<a href="#home" class="brand">ADORA</a>
+
+		<div class="navigation">
+			<div class="navigation_items">
+				<a href="#home">Home</a>
+				<a href="#about_us">About</a>
+				<a href="#services">Services</a>
+				<a href="#gallery">Gallery</a>
+				<a href="#vlogs">Vlogs</a>
+				<a href="#contact">Contact Us</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- Page 1: Homapage (Video Slide)-->
+	<section id="home" class="home">
+		<video class="video_slide active" src="background_videos/video_00.mp4" autoplay muted loop></video>
+		<video class="video_slide" src="background_videos/video_01.mp4" autoplay muted loop></video>
+		<video class="video_slide" src="background_videos/video_02.mp4" autoplay muted loop></video>
+		<video class="video_slide" src="background_videos/video_03.mp4" autoplay muted loop></video>
+		<video class="video_slide" src="background_videos/video_04.mp4" autoplay muted loop></video>
+		
+		<div class="content active">	
+			<h1>Where love<br><span>finds a home</span></h1>
+			<p>
+				Welcome to ADORA, where pets are more than companions — they’re family. We’re here to bring you closer to the joy, love, and loyalty that only pets can give. Discover your new best friend today.
+			</p>
+			<a href="#about_us">Read More</a>
+		</div>	
+		<div class="content">	
+			<h1>Where every<br><span> pet matters</span></h1>
+			<p>
+				At ADORA, we believe pets deserve more than just care — they deserve adoration. We’re here to make sure your furry friends are loved, safe, and happy. Because every pet deserves a life full of love.
+			</p>
+			<a href="#about_us">Read More</a>
+		</div>	
+		<div class="content">	
+			<h1>Love begins<br><span> here</span></h1>
+			<p>
+				ADORA is where the journey of companionship starts. We connect families with pets and provide everything they need to thrive in a loving home. Together, we create bonds that last a lifetime.
+			</p>
+			<a href="#about_us">Read More</a>
+		</div>	
+		<div class="content">	
+			<h1>For every <br><span>wag & purr</span></h1>
+			<p>
+				At ADORA, every little tail wag and gentle purr inspires us. We’re dedicated to creating a space where pets are celebrated, cared for, and truly cherished. Here, joy is measured in paws and whiskers.
+			</p>
+			<a href="#about_us">Read More</a>
+		</div>	
+		<div class="content">	
+			<h1>Home of<br><span>happy pets</span></h1>
+			<p>
+				ADORA is more than a pet shop — it’s a community built on love and care. Whether you’re welcoming a new friend or supporting the ones you have, we’re here to make every pet feel at home. Happiness starts with ADORA.
+			</p>
+			<a href="#about_us">Read More</a>
+		</div>	
+
+		<!-- Social Media Icons (Fixed) -->
+		<div class="social_media_icons">
+			<a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+			<a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></i></a>
+			<a href="https://x.com/"><i class="bi bi-twitter-x"></i></i></a>
+		</div>
+
+		<!-- Homepage Video Sliding Nav Btns -->
+		<div class="slider_navigation">
+			<div class="nav_btn active"></div>
+			<div class="nav_btn"></div>
+			<div class="nav_btn"></div>
+			<div class="nav_btn"></div>
+			<div class="nav_btn"></div>
+		</div>
+	</section>
+
+	<!-- Javascript for Video Slider -->
+	<script type="text/javascript">
+		//JS for Video Slider Navigation
+		
+		const btns = document.querySelectorAll(".nav_btn");
+		const slides = document.querySelectorAll(".video_slide");
+		const contents = document.querySelectorAll(".content");
+
+		var sliderNav = function(manual){
+			btns.forEach((btn) =>{
+				btn.classList.remove("active");
+			});
+
+			slides.forEach((slide) => {
+				slide.classList.remove("active");
+			});
+
+			contents.forEach((content) => {
+				content.classList.remove("active");
+			});
+
+			btns[manual].classList.add("active");
+			slides[manual].classList.add("active");
+			contents[manual].classList.add("active");
+		}
+
+		btns.forEach((btn, i) =>{
+			btn.addEventListener("click",() => {
+				sliderNav(i);
+			});
+		});
+	</script>
+
+	<!-- Page 2: About Us -->
+	<section id="about_us" class="about">
+
+		<h2 class="about_title"><b>About Us</b></h2>
+
+			<table>
+				<tr>
+					<td>
+						<p class="text">
+							At ADORA, pets are more than companions — they’re family. Our mission is to bring love, care, and joy into every pet’s life while helping families find their perfect furry friends.
+						</p>
+						<p>
+							From adoption to essentials, we provide everything your pets need to feel safe, happy, and adored. Together, we’re building a community where pets thrive and homes are filled with love.
+						</p>
+						<br>
+						<div class="explore_btn">
+							<a href="#services">Explore <i class="bi bi-arrow-down"></i></a>
+						</div>
+					</td>
+					<td>
+						<img src="images/about_img.png">
+					</td>
+				</tr>
+			</table>
+		
+	</section>
+
+	<!-- Page 3: Services -->
+	<div class="services_bg">
+		<section id="services" class="services">
+			<div class="services_title">
+				<h2><b>Services</b></h2>
+				<p class="services_intro">
+			        <p>We provide trusted care designed to meet your pet’s needs.
+					Explore our services and discover how we can help.</p>
+			    </p>
+			</div>  
+				<!-- Service Boxes -->
+				<div class="service_boxes">
+					<div class="service_card">
+					    <img src="images/services/service_1.png" alt="Service 1">
+					    <div class="service_info">
+						    <h4>Pet Adoption</h4>
+						    <hr>
+						    <p>We connect rescued animals with loving families.</p>
+				    	</div>
+					</div>
+
+					<div class="service_card">
+					    <img src="images/services/service_2.png" alt="Service 2">
+					    <div class="service_info">
+						    <h4>Veterinary Care</h4>
+						    <hr>
+						    <p>Vaccinations, check-ups, and treatment for all pets.</p>
+					    </div>
+					</div>
+
+					<div class="service_card">
+					    <img src="images/services/service_3.png" alt="Service 3">
+					    <div class="service_info">
+						    <h4>Community Programs</h4>
+						    <hr>
+						    <p>Workshops, awareness campaigns, and volunteer drives.</p>
+					    </div>
+					</div>
+				</div>
+
+			<!-- Achievements -->
+			<div class="table_acheivement">
+				<table>
+					<tr>
+						<td>10k <span>adoption</span></td>
+						<td>7k <span>rescued</span></td>
+						<td>96k <span>clients</span></td>
+						<td>100+ <span>pet supplies</span></td>
+					</tr>
+				</table>
+			</div>
+		</section>
+	</div>
+
+	<!-- Page 4: Gallery -->
+	<section id="gallery" class="gallery">
+		<div class="gallery_title">
+			<h2><b>Gallery</b></h2>
+		</div>
+		
+		<!-- Bootstrap Slideshow -->
+		<div id="carouselExampleCaptions" class="carousel slide">
+		  <div class="carousel-indicators">
+		    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+		    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+		  </div>
+
+		  <!-- Images for Slideshow -->
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img src="images\gallery\pet_1.png" class="d-block w-100" alt="pet_1">
+		      <div class="carousel-caption d-none d-md-block">
+		        <h5>Blooming Joy</h5>
+		        <p>A playful pup enjoying a sunny day among flowers.</p>
+		      </div>
+		    </div>
+
+		    <div class="carousel-item">
+		      <img src="images\gallery\pet_2.png" class="d-block w-100" alt="pet_2">
+		      <div class="carousel-caption d-none d-md-block">
+		        <h5>Sandy Paws</h5>
+		        <p>Best friends chasing waves and sunshine together.</p>
+		      </div>
+		    </div>
+
+		    <div class="carousel-item">
+		      <img src="images\gallery\pet_3.png" class="d-block w-100" alt="pet_3">
+		      <div class="carousel-caption d-none d-md-block">
+		        <h5>Curious Gaze</h5>
+		        <p>A calm moment of wonder in the green grass.</p>
+		      </div>
+		    </div>
+
+		    <div class="carousel-item">
+		      <img src="images\gallery\pet_4.png" class="d-block w-100" alt="pet_3">
+		      <div class="carousel-caption d-none d-md-block">
+		        <h5>Tiny Troublemakers</h5>
+		        <p>Mischief and fun wrapped in soft little paws.</p>
+		      </div>
+		    </div>
+
+		    <div class="carousel-item">
+		      <img src="images\gallery\pet_5.png" class="d-block w-100" alt="pet_3">
+		      <div class="carousel-caption d-none d-md-block">
+		        <h5>Cozy Company</h5>
+		        <p>Sweet dreams shared in a furry cuddle pile.</p>
+		      </div>
+		    </div>
+		  </div>
+
+		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+		</div>
+	</section>
+
+	<!-- Page 5: Vlogs -->
+	<div class="vlogs_bg">
+	<section id="vlogs" class="vlogs">
+		<div class="vlogs_title">
+			<h2><b>vlogs</b></h2>
+			<p>
+				From playful paws to cuddly moments, catch all the furry fun in our vlogs!
+			</p>	
+		</div>	
+
+		<!-- Embed Videos -->
+		<div class="embed_vlogs">
+			<iframe width="520" height="320" src="https://www.youtube.com/embed/zIk0CVglyn0?si=eYKSNKtKkbgL18Q-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+			<iframe width="520" height="320" src="https://www.youtube.com/embed/0ToNj9GAVZ8?si=NZMdVtAzXbwhO09c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>			
+		</div>
+		<div class="vlogs_footer">
+			<a href="https://www.youtube.com/">Watch More!</a>	
+			<a href="https://www.youtube.com/">Click Here!</a>			
+		</div>
+	</div>
+	</section>
+
+	<!-- Page 6: Contact Us -->
+	<div class="contact_us">
+		<section id="contact" class="contact">
+			<div class="contact_title">
+				<h2><b>contact us</b></h2>
+			</div>
+
+			<!-- Contact Us Form -->
+			<form class="contact_form">
+			    <table>
+			      <tr>
+			        <td><input type="text" name="name" placeholder="Your Name" required></td>
+			        <td><input type="email" name="email" placeholder="Your Email" required></td>
+			      </tr>
+			      <tr>
+			        <td colspan="2">
+			          <textarea name="message" placeholder="Write your message here..." required></textarea>
+			        </td>
+			      </tr>
+			      <tr>
+			        <td colspan="2" style="text-align:center;">
+			          <button type="submit">Send Message</button>
+			        </td>
+			      </tr>
+			    </table>
+			</form>
+			
+			<!-- Contact Info  -->
+			<div class="contact_content">
+
+				<div class="icon">
+				<i class="bi bi-envelope"></i>
+				<span>
+					adora@adora.com
+				</span>
+				</div>
+
+				<div class="icon">
+				<i class="bi bi-telephone"></i>
+				<span>
+					+977 9800000000
+				</span>
+				</div>
+				
+
+				<div class="icon">
+				<i class="bi bi-geo-alt"></i>
+				<span>
+					Pokhara, Nepal
+				</span>
+				</div>
+
+				<div class="footer_copy">
+	    			<p>© 2025 Adora Pet Shelter. All rights reserved.</p>
+	  			</div>
+			</div>
+
+
+		</section>
+
+	</div>
+
+	<!-- Javascript -->
+	<script>
+		//Navigation Bar Scrolling Effect
+		window.addEventListener("scroll", function() {
+		const header = document.querySelector("header");
+		header.classList.toggle("scrolled", window.scrollY > 50);
+		});
+
+	</script>
+
+	<!-- Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
